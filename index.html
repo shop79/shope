@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Минимал Маркет</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Минимал Маркет</h1>
+        <nav>
+            <span id="userStatus">Гость</span>
+            <button id="logoutBtn" style="display:none;">Выйти</button>
+            <button id="cartBtn">Корзина (<span id="cartCount">0</span>)</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Форма входа/регистрации -->
+        <section id="authSection">
+            <h2>Вход / Регистрация</h2>
+            <input type="text" id="username" placeholder="Логин">
+            <input type="password" id="password" placeholder="Пароль">
+            <button id="loginBtn">Войти</button>
+            <button id="registerBtn">Зарегистрироваться</button>
+        </section>
+
+        <!-- Каталог товаров -->
+        <section id="catalogSection" style="display:none;">
+            <h2>Товары</h2>
+            <div id="productList"></div>
+        </section>
+
+        <!-- Корзина (всплывающее окно) -->
+        <div id="cartModal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Корзина</h2>
+                <div id="cartItems"></div>
+                <p>Итого: <span id="totalPrice">0</span> ₽</p>
+                <button id="clearCartBtn">Очистить</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
